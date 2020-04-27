@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div>
+        <h2 class="mt-3">We've got your order.</h2>
+        <p>It will be delivered over to you shortly.</p>
+
+        <table class="text-left mt-5">
+            {% for choices in summary %}
+                {% if choices["value"]|length > 0 %}
+                    <tr class="border-bottom">
+                        <td>
+                            <p class="font-weight-bold" style="width:500px;">{{ choices["header"] }}</p>
+                        </td>
+                        <td class="pt-2">
+                            <ul style="width:200px;" class="list-unstyled">
+                                {% for choice in choices["value"] %}
+                                    <li>
+                                        <p class="font-weight-light">{{ choice.replace("_", " ").title() }}</p>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </table>
+
+
+
+
+
+{#        {% for choices in summary %}#}
+{#            {% if choices["value"]|length > 0 %}#}
+{#                <h4>{{ choices["header"] }}</h4>#}
+{#                {% for choice in choices["value"] %}#}
+{#                    <p>{{ choice.replace("_", " ").title() }}</p>#}
+{#                {% endfor %}#}
+{#            {% endif %}#}
+{#        {% endfor %}#}
+        <form method="post" action="#" class="mx-auto">
+            <input class="btn btn-success mt-5" type="submit" name="back" value="Back">
+            <input class="btn btn-success mt-5" type="submit" name="submit" value="Make New Order">
+        </form>
+    </div>
+{% endblock content %}

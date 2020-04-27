@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="justify-content-center">
+        <h3>
+            {{ question }}
+        </h3>
+        <div class="mt-5">
+            <form method="post" action="#" class="mx-auto">
+                {% for value in radio %}
+                    <div class="radio">
+                      <label><input type="radio" name="group" value={{ value }}>
+                          {{ value.replace("_", " ").title() }}
+                      </label>
+                    </div>
+                {% endfor %}
+
+                <input class="btn btn-success mt-5" type="submit" name="back" value="Back">
+                <input class="btn btn-success mt-5" type="submit" name="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+{% endblock content %}
