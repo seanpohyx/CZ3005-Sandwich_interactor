@@ -7,27 +7,27 @@ The prolog script offers different meal options, sandwich options, meat options,
 * SWI-Prolog
 * Flask framework (Python)
 
-##Prolog File
+## Prolog File
 `knowledge_base.pl`
 
-##Instructions
+## Instructions
 
-#####Install Virtual Env
+##### Install Virtual Env
 `$ pip3 install virtualenv`
 
-#####Activating env
+##### Activating env
 `$ source env/bin/activate`
 
-#####Install requirements
+##### Install requirements
 `$ pip3 install -r requirements.txt`
 
-#####Run command 
+##### Run command 
 `$ python3 app.py`
 
 ##### Click on this link to view
 http://localhost:5000/
 
-##Additional information
+## Additional information
 For MacOS, homebrew's latest swi-prolog version is unstable. Hence it has to backtrack into using the following version instead.
 
 `$ brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/09a94009142a6265b0b8e322463100610aeda964/Formula/swi-prolog.rb`
